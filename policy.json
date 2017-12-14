@@ -1,0 +1,35 @@
+[
+  {
+    "CountToActualize": 1,
+    "Scopes": [
+      {
+        "Rules": [
+          {
+            "Field": "Level",
+            "Value": "High",
+            "IsRegex": false
+          },
+          {
+            "Field": "Exploit",
+            "Value": ".",
+            "IsRegex": true
+          }
+        ]
+      },
+      {
+        "Rules": [
+          {
+            "Field": "Level",
+            "Value": "High",
+            "IsRegex": false
+          },
+          {
+            "Field": "IsSecondOrder",
+            "Value": "True",
+            "IsRegex": false
+          }
+        ]
+      }
+    ]
+  }
+] 
