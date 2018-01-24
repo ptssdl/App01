@@ -78,21 +78,11 @@ public class MainServlet extends HttpServlet {
     	// I will use secure P@ssw0rd (corresponds to 161ebd7d45089b3446ee4e0d86dbcf92 MD5)
     	System.out.println("Remote host is " + theRq.getRemoteHost());
     	String l_strDbgPwd = theRq.getParameter("DEBUGPWD");
-    	if (Debug.MD5(l_strDbgPwd).equals("161ebd7d45089b3446ee4e0d86dbcf92")) {
+    	if (Debug.MD5(l_strDbgPwd).equals("161ebd7d45089b3446ee4e0d86dbcf92")) 
     		Debug.getLogFile(theRq.getParameter("LOGFILE"), theResponse);
-    		return;
-    	}
     	
         String l_strName = theRq.getParameter("NAME");
-        if ((null == l_strName) || (l_strName.trim().isEmpty())) {
-            this.warning(theResponse, "NAME parameter missing");
-            return;
-        }
         Connection l_objDB = this.getDB();
-        if (null == l_objDB) {
-            this.warning(theResponse, "DB connect failed");
-            return;
-        }
         g_objLog.debug("Database searched for " + l_strName);
         StringBuffer l_objRes = new StringBuffer();
 
