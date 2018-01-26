@@ -10,6 +10,12 @@
 </head>
 <body>
 <div class="container">
+    <button type="button" id="AFR" class="btn btn-danger">AFR</button>
+    <button type="button" id="SQLi1" class="btn btn-danger">SQLi #1</button>
+    <button type="button" id="SQLi2" class="btn btn-danger">SQLi #2</button>
+    <button type="button" id="SQLi3" class="btn btn-danger">SQLi #3</button>
+    <button type="button" id="XSS" class="btn btn-warning">You won 1 000 000!</button>
+    <button type="button" id="LF" class="btn btn-warning">Log forging</button>
     <form>
         <legend>Employee search</legend>
         <div class="form-group">
@@ -19,6 +25,7 @@
         <button type="button" id="RUN" class="btn">Find</button>
     </form>
     <div id="RESULT"></div>
+    <script>var g_strCtxPath = "${pageContext.request.contextPath}"</script>
     <script type="text/javascript" src="/App01/js/jQuery/jquery-2.0.1.js"></script>
     <script type="text/javascript" src="/App01/js/Moment/moment-with-locales.js"></script>
     <script type="text/javascript" src="/App01/js/Bootstrap/js/bootstrap.min.js"></script>

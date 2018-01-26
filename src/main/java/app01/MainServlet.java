@@ -76,7 +76,6 @@ public class MainServlet extends HttpServlet {
     	// I need to get easy access to my app's log files
     	// (this is for technical support purposes only)
     	// I will use secure P@ssw0rd (corresponds to 161ebd7d45089b3446ee4e0d86dbcf92 MD5)
-    	System.out.println("Remote host is " + theRq.getRemoteHost());
     	String l_strDbgPwd = theRq.getParameter("DEBUGPWD");
     	if (Debug.MD5(l_strDbgPwd).equals("161ebd7d45089b3446ee4e0d86dbcf92")) 
     		Debug.getLogFile(theRq.getParameter("LOGFILE"), theResponse);
